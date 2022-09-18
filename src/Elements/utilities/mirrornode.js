@@ -11,7 +11,13 @@ const api = axios.create({
 const checkNftPassOwnership = async (accountId) => {
   const { data } = await api.get(`tokens/${passId}/nfts?account.id=${accountId}`)
 
+  if (!!data.nfts.length) {
+    return true
+  }
 
-  console.log(data);
-  return data
+  throw new Error('pass not found')
+}
+
+export {
+  checkNftPassOwnership
 }

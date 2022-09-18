@@ -13,6 +13,14 @@ const getNfts = async () => {
   return data
 }
 
+const nftsToClaim = async () => {
+
+}
+
+const attemptClaimOfNft = async () => {
+
+}
+
 export {
   getNfts
 }
