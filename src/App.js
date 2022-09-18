@@ -8,8 +8,8 @@ import {
   Art,
   Footer,
   AcquireNftCta,
-  Hero,
-  FAQ
+  FAQ,
+  Hero
 } from './Elements'
 
 const queryClient = new QueryClient();
