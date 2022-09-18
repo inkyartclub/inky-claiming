@@ -15,7 +15,7 @@ export default function Art() {
         <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {!!nfts && nfts.map((nft, i) => (
             <a key={nft.id} className="group">
-              <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+              <div className="hover:scale-110 duration-300 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
                 <SlideshowLightbox theme="day">
                   <img className='w-full rounded' src={nft.image_url} alt="img"/>
                   <></>
