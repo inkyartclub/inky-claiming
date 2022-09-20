@@ -36,9 +36,7 @@ export default function ConfirmClaimModal() {
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
                 <div>
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
-                    <CheckIcon className="h-6 w-6 text-green-600" aria-hidden="true" />
-                  </div>
+                  <img className='mx-auto h-20 w-20 items-center justify-center rounded-full' src="https://spaces.remotesoftwaredevelopment.com/Ink%27s%20Art%20Club/icon_meta.JPG" alt="img"/>
                   <div className="mt-3 text-center sm:mt-5">
                     <Dialog.Title as="h3" className="text-2xl font-medium leading-6 text-gray-900 mb-8">
                       Get ready to start claiming Inky's NFTs

@@ -27,13 +27,27 @@ export default function Hero() {
     }
 
     checkNftPassOwnership(accountId.id)
-      .then(() => {
+      .then((passOwnership) => {
+        accountId.serials = passOwnership
+
+        setPersistedAccount(accountId)
+
         setClaimMode(true)
       })
       .catch(() => {
-        setPersistedAccount({ id: '', valid: false })
+        setPersistedAccount({ id: '', valid: false, selected_serial: 'Serial', serials: [] })
       });
   }, []);
+
+  const updateSerial = ({ target }) => {
+    const updated = {
+      ...accountId,
+      selected_serial: target.text
+    }
+
+    updateAccountId(updated)
+    setPersistedAccount(updated)
+  }
 
   const startClaiming = () => {
 
@@ -44,11 +58,15 @@ export default function Hero() {
       return
     }
 
-    const myPromise = checkNftPassOwnership(accountId.id);
+    const passOwnership = checkNftPassOwnership(accountId.id);
 
-    toast.promise(myPromise, {
+    toast.promise(passOwnership, {
       loading: 'Waiting for the magical toad...',
-      success: () => {
+      success: (result) => {
+
+        accountId.selected_serial = result[0]
+        accountId.serials = result
+
         setPersistedAccount(accountId)
         setClaimMode(true)
 
@@ -66,8 +84,8 @@ export default function Hero() {
     updateAccountId({ id: value, valid });
   }
 
-
   return <HeroView
+    updateSerial={updateSerial}
     handleOnChange={handleOnChange}
     canClaimMode={canClaimMode}
     startClaiming={startClaiming}

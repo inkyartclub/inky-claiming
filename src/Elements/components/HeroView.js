@@ -12,6 +12,7 @@ const navigation = [
 ]
 
 export default function HeroView({
+   updateSerial,
    handleOnChange,
    canClaimMode,
    startClaiming,
@@ -138,7 +139,13 @@ export default function HeroView({
                   Get access to an <b>entire decade</b> of adorable, unique, and exclusive NFT art by holding a <b>Inky Super Pass</b>, every single month. Start claiming below, join our community, and support charities.
                 </p>
                 <div className="flex-row sm:flex sm:justify-center lg:justify-start mt-2">
-                  <Input onTextChange={handleOnChange} canClaimMode={canClaimMode} value={accountId.id}/>
+                  <Input
+                      accountId={accountId}
+                      updateSerial={updateSerial}
+                      onTextChange={handleOnChange}
+                      canClaimMode={canClaimMode}
+                      value={accountId.id}
+                  />
                   <div className={`md:mt-12 md:mx-4 sm:mx-2 sm:mt-11 mt-6 ${ canClaimMode && ''}`}>
                     <div className="rounded-md shadow disabled">
                       {
@@ -148,7 +155,7 @@ export default function HeroView({
                             className={`flex w-full items-center justify-center rounded-md border border-transparent ${allClaimed ? 'bg-gray-500' : 'bg-green-500'} px-8 text-base font-medium text-white  ${allClaimed ? 'hover:bg-gray-600' : 'hover:bg-green-600'} py-4 text-lg md:m
                             r-8`}
                           >
-                            { allClaimed ? '😇 All NFTs claimed' : <><div className={`${canClaimMode && 'delay-300 animate-[spin_1s_ease-in-out]'}`}>⚡️</div>️ Start Claiming</> }
+                            { allClaimed ? '😇 All NFTs claimed' : <><div className={`${canClaimMode && 'delay-300 animate-[spin_1s_ease-in-out]'} onpress:animate-[spin_fade-in]`}>⚡️</div>️ Start Claiming</> }
                           </button> :
                           <button
                             onClick={checkPassOwnership}

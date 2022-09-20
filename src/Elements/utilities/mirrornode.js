@@ -12,7 +12,8 @@ const checkNftPassOwnership = async (accountId) => {
   const { data } = await api.get(`tokens/${passId}/nfts?account.id=${accountId}`)
 
   if (!!data.nfts.length) {
-    return true
+    // Only deal with max 12 passes per account for now
+    return data.nfts.map(nft => `#` + nft.serial_number).slice(0, 12)
   }
 
   throw new Error('pass not found')
