@@ -60,8 +60,21 @@ export default function Hero() {
 
     const passOwnership = checkNftPassOwnership(accountId.id);
 
+    const bank = [
+      'Waiting for the magical toad...',
+      'Humbly asking the hedgehogs to give up their secrets...',
+      'Scrambling for the swamp witches book of shadows...',
+      'Indeed, this is the way...',
+      'Luck is where preparation meets opportunity...',
+      'Spinning the yarn...',
+      'Lightfast inks for the win...',
+      'Their loyalty is inspired by the hellish landscape of bosch...'
+    ]
+
+    const loading = bank[Math.floor(Math.random(0, bank.length) * bank.length)]
+
     toast.promise(passOwnership, {
-      loading: 'Waiting for the magical toad...',
+      loading,
       success: (result) => {
 
         accountId.selected_serial = result[0]

@@ -179,7 +179,7 @@ export default function HeroView({
             muted
             alt="Inky pass video"
             ref={videoEl}
-          ><source src='https://spaces.remotesoftwaredevelopment.com/pass/Ink-Pass-dev.m4v' type="video/mp4"/></video>
+          ><source src='https://spaces.remotesoftwaredevelopment.com/Ink%27s%20Art%20Club/INKY_PASS.m4v' type="video/mp4"/></video>
         </div>
       </div>
     </>
