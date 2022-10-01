@@ -8,17 +8,12 @@ import HeroView from "./components/HeroView";
 
 const useAccountIdState = createPersistedState('account');
 
-const navigation = [
-  { name: 'Watch the Promo', href: '#' },
-  { name: 'Discord', href: '#' },
-  { name: 'Zuse Market', href: '#' },
-]
-
 export default function Hero() {
 
   const [persistedAccount, setPersistedAccount] = useAccountIdState('');
   const [accountId, updateAccountId] = useState(persistedAccount);
   const [canClaimMode, setClaimMode] = useState(false);
+  const [openClaim, setShowClaim] = useState(false)
   const [allClaimed, setAllClaimed] = useState(false);
 
   useEffect(() => {
@@ -50,7 +45,7 @@ export default function Hero() {
   }
 
   const startClaiming = () => {
-
+    setShowClaim(true)
   }
 
   const checkPassOwnership = () => {
@@ -102,6 +97,8 @@ export default function Hero() {
     handleOnChange={handleOnChange}
     canClaimMode={canClaimMode}
     startClaiming={startClaiming}
+    openClaim={openClaim}
+    setShowClaim={setShowClaim}
     allClaimed={allClaimed}
     checkPassOwnership={checkPassOwnership}
     accountId={accountId}

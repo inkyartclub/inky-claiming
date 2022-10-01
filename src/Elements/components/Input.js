@@ -11,12 +11,12 @@ export default function Input({
 }) {
   return (
     <div className="mt-4 sm:w-1/2">
-      <div className="flex flex-row mb-1">
-        <label htmlFor="account-number" className="w-1/2 block mb-2 text-sm text-left font-medium text-gray-200">
+      <div className="flex flex-row ">
+        <label htmlFor="account-number" className="w-1/2 block mb-2 text-md text-left font-medium text-gray-200">
           Hedera Account Id
         </label>
         {canClaimMode &&
-          <label htmlFor="account-number" className="w-1/2 block mb-2 text-sm font-medium text-gray-200 text-right pr-1">
+          <label htmlFor="account-number" className="w-1/2 block mb-2 text-md font-medium text-gray-200 text-right pr-1">
             Pass Number
           </label>
         }
@@ -51,8 +51,9 @@ function SerialDropdown({
     const passIds = accountId.serials || []
     const total = passIds.length
 
-    const smCols = total < 4 ? total : 4
-    const largeCols = total < 7 ? total : 7
+    // Constant this up sometime
+    const rows = 4
+    const smCols = total < rows ? total : rows
 
     return (
     <Menu as="div" className="relative inline-block text-left -mr-3">
@@ -76,10 +77,10 @@ function SerialDropdown({
         leaveTo="transform opacity-0 scale-95"
       >
           <Menu.Items
-            className={`absolute border mb-2 -left-40 px-4 md:-left-40 md:-right-40 grid grid-cols-${smCols} lg:grid-cols-${largeCols} mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none place-items-center justify-center`}
+            className={`absolute border mb-2 -left-40 px-4 md:-left-40 md:-right-40 grid grid-cols-4 mt-1 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none place-items-center justify-center`}
             >
-          {passIds.map((id) => {
-            return <Menu.Item>
+          {passIds.map((id, i) => {
+            return <Menu.Item key={i}>
               {({ active }) => (
                 <a
                 onClick={updateSerial}

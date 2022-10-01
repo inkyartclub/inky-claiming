@@ -1,10 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {
+
   main: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: 'Discord', href: 'https://discord.gg/Y2YwG5TnNr' },
+    { name: 'Hedera Sentient', href: 'https://hederasentient.com/' },
+    { name: 'Zuse Market ', href: 'https://zuse.market/' },
   ],
   social: [
     {
@@ -47,12 +47,12 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white ">
       <div className="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
         <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <a href={item.href} className="text-base text-gray-500 hover:text-gray-900">
+              <a href={item.href} className="text-base text-lg font-medium text-gray-400 hover:text-gray-900">
                 {item.name}
               </a>
             </div>

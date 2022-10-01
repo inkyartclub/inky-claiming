@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 export default function AcquireNftCta() {
   return (
-    <div className="bg-white">
+    <div className="bg-white tracking-tight">
       <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 md:py-16 lg:px-8 lg:py-20">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           <span className="block">Don't have a Super Inky Pass?</span>
@@ -13,13 +13,13 @@ export default function AcquireNftCta() {
               href="#"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-green-400 px-5 py-3 text-base font-bold text-white hover:bg-green-600 text-xl"
             >
-              Acquire from Zuse Market
+              Acquire from Hedera Sentient
             </a>
           </div>
           <div className="ml-3 inline-flex">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-base font-medium text-gray-700 hover:bg-indigo-200 text-xl"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-base font-medium text-gray-700 hover:bg-green-100 text-xl"
             >
               Join Discord
             </a>
