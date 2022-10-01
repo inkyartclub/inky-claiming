@@ -12,6 +12,8 @@ import {
   Hero
 } from './Elements'
 
+require('typeface-barlow')
+
 const queryClient = new QueryClient();
 
 function App() {
