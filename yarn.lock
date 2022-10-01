@@ -9299,6 +9299,11 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typeface-barlow@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-barlow/-/typeface-barlow-1.1.13.tgz#cd1112f10a5578ce01299041558db0db0dfd0109"
+  integrity sha512-IuXLXcA/U7ZR5gfy1yHVr6Qqrcr/gjmrwAaSXqTXigXbiz6ZR2gsaP4m5i058e67gQ7NyVCjNIgNDsRTE25Wwg==
+
 unbox-primitive@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz"
