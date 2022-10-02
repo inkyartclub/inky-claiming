@@ -1,10 +1,12 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { accountIdRegex } from "./helper/regex";
 import toast from "react-hot-toast";
 import createPersistedState from 'use-persisted-state';
 import { checkNftPassOwnership } from "./utilities/mirrornode";
 import HeroView from "./components/HeroView";
+import ConfirmClaimModal from "./ConfirmClaimModal";
+import {attemptClaimOfNft, nftsToClaim} from "./utilities/api";
+import {useQuery} from "@tanstack/react-query";
 
 const useAccountIdState = createPersistedState('account');
 
@@ -45,7 +47,9 @@ export default function Hero() {
   }
 
   const startClaiming = () => {
-    setShowClaim(true)
+    if (!allClaimed) {
+      setShowClaim(true)
+    }
   }
 
   const checkPassOwnership = () => {
@@ -92,15 +96,61 @@ export default function Hero() {
     updateAccountId({ id: value, valid });
   }
 
-  return <HeroView
-    updateSerial={updateSerial}
-    handleOnChange={handleOnChange}
-    canClaimMode={canClaimMode}
-    startClaiming={startClaiming}
-    openClaim={openClaim}
-    setShowClaim={setShowClaim}
-    allClaimed={allClaimed}
-    checkPassOwnership={checkPassOwnership}
-    accountId={accountId}
-  />
+  const serial = persistedAccount?.selected_serial?.substr(1) || '';
+  const claimableQuery = useQuery(['claimable-nfts', serial], () => nftsToClaim(serial))
+
+  const processNftClaiming = ({
+    account_id,
+    serial,
+    nfts
+  }) => {
+
+
+    nfts.map(nft => {
+
+      const claimNft = attemptClaimOfNft({
+        nft_id: nft.token,
+        account_id,
+        serial
+      })
+
+      toast.promise(claimNft, {
+        loading: `Attempting to claim ${nft.name} (${nft.token})`,
+        success: () => {
+
+          // After every successful claim
+          claimableQuery.refetch()
+
+          return `🔥 Successfully claimed NFT ${nft.name} (${nft.token})`
+        },
+        error: ({ response }) => `🥲 Oh no we got a claiming error - ${response.data.message} for ${nft.name} (${nft.token})`,
+      }, {
+        position: 'top-right',
+        duration: 10000
+      })
+    })
+  }
+
+  return <>
+      <ConfirmClaimModal
+        open={openClaim}
+        setOpen={setShowClaim}
+        processNftClaiming={processNftClaiming}
+        account={persistedAccount}
+        setAllClaimed={setAllClaimed}
+        claimableData={claimableQuery.data}
+        serial={serial}
+      />
+      <HeroView
+      updateSerial={updateSerial}
+      handleOnChange={handleOnChange}
+      canClaimMode={canClaimMode}
+      startClaiming={startClaiming}
+      openClaim={openClaim}
+      setShowClaim={setShowClaim}
+      allClaimed={allClaimed}
+      checkPassOwnership={checkPassOwnership}
+      accountId={accountId}
+    />
+  </>
 }

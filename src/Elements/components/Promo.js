@@ -1,11 +1,10 @@
-import {Fragment, useEffect, useRef, useState} from 'react'
+import { Fragment, useEffect, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
 export default function Promo({
   open,
   setOpen
 }) {
-  // const [open, setOpen] = useState(true)
 
   const videoEl = useRef(null);
 

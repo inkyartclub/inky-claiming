@@ -13,14 +13,30 @@ const getNfts = async () => {
   return data
 }
 
-const nftsToClaim = async () => {
+const nftsToClaim = async (serial) => {
+  if (!serial) {
+    return {}
+  }
 
+  const { data } = await api.get(`api/v1/claim/${serial}/status`)
+
+  return data
 }
 
-const attemptClaimOfNft = async () => {
+const attemptClaimOfNft = async ({
+  nft_id,
+  account_id,
+  serial
+}) => {
+
+  const { data } = await api.post(`api/v1/nft/${nft_id}/serial/${serial}/account/${account_id}/claim`)
+
+  return data
 
 }
 
 export {
-  getNfts
+  getNfts,
+  nftsToClaim,
+  attemptClaimOfNft
 }

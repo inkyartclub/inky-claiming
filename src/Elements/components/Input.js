@@ -49,11 +49,6 @@ function SerialDropdown({
 }) {
 
     const passIds = accountId.serials || []
-    const total = passIds.length
-
-    // Constant this up sometime
-    const rows = 4
-    const smCols = total < rows ? total : rows
 
     return (
     <Menu as="div" className="relative inline-block text-left -mr-3">

@@ -1,6 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
 const faqs = [
   {
+    question: "What is the NFT Collection ID for the Inky Super Pass?",
+    answer:
+      `The pass collection id is ${process.env.REACT_APP_NFT_PASS_ID}, remember you need to associate it before you can receive it in your Hedera account wallet!`,
+  },
+  {
     question: "Why should I care about this project?",
     answer:
         "Our wish is to carve a new pathway for any artist is to make a living, to create the art they love, and build a community at the same time. To apply concept of '1000 True Fans' to an artist exclusive NFT pass.",

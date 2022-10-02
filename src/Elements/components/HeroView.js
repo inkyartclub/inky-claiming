@@ -3,7 +3,6 @@ import { Toaster } from "react-hot-toast";
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Input from "./Input";
-import ConfirmClaimModal from "./ConfirmClaimModal";
 import Promo from "./Promo"
 
 const navigation = [
@@ -17,8 +16,6 @@ export default function HeroView({
    handleOnChange,
    canClaimMode,
    startClaiming,
-   openClaim,
-   setShowClaim,
    allClaimed,
    checkPassOwnership,
    accountId
@@ -42,7 +39,6 @@ export default function HeroView({
 
   return (
     <>
-      <ConfirmClaimModal open={openClaim} setOpen={setShowClaim}/>
       <Toaster
         duration={30}
         position="top-center"
