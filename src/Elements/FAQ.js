@@ -55,6 +55,11 @@ const faqs = [
     answer:
       "You've probably heard that some cryptocurrencies are bad for the environment, like Bitcoin, this all boils down to the method to how consensus is reached. Using 'green' in this context describes the technology we to create our NFTs is carbon-neutral or negative by default, we use Hedera Hashgraph to deliver this ethical project.",
   },
+  {
+    question: "I tried to claim my NFT but it didn't work...",
+    answer:
+      "When you attempt to claim your NFTs we add popups to keep track of the status, normally you just need to make sure you have associated, but if there are other issues then please let us know in discord. ",
+  },
   // More questions...
 ]
 
