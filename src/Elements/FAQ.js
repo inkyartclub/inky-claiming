@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "Why should I care about this project?",
     answer:
-        "Our wish is to carve a new pathway for any artist is to make a living, to create the art they love, and build a community at the same time. To apply concept of '1000 True Fans' to an artist exclusive NFT pass. With this pass you'll receive at least 120 unique Art NFTs over the next decade!",
+      "Our wish is to carve a new pathway for any artist to make a living, to create the art they love, and build a community at the same time. To apply the concept of '1000 True Fans' to an artist exclusive NFT pass. With this pass you'll receive at least 120 unique Art NFTs over the next decade!",
   },
   {
     question: "How does a Super Inky Pass pass work?",
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "What on earth is a Green NFT?",
     answer:
-      "You've probably heard that some cryptocurrencies are bad for the environment, like Bitcoin, this all boils down to the method to how consensus is reached. Using 'green' in this context describes the technology we to create our NFTs is carbon-neutral or negative by default, we use Hedera Hashgraph to deliver this ethical project.",
+      "You've probably heard that some cryptocurrencies are bad for the environment, like Bitcoin, this all boils down to the method to how consensus is reached. Using 'green' in this context describes the technology we use to create our NFTs which is carbon-neutral or negative by default. We use Hedera Hashgraph to deliver this ethical project.",
   },
   {
     question: "I tried to claim my NFT but it didn't work...",
