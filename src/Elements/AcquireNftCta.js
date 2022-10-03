@@ -10,7 +10,8 @@ export default function AcquireNftCta() {
         <div className="mt-8">
           <div className="inline-flex rounded-md shadow">
             <a
-              href="#"
+              href="https://hederasentient.com/"
+              target="_blank"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-green-400 px-5 py-3 text-base font-bold text-white hover:bg-green-600 text-xl"
             >
               Acquire from Hedera Sentient
@@ -18,7 +19,8 @@ export default function AcquireNftCta() {
           </div>
           <div className="ml-3 inline-flex">
             <a
-              href="#"
+              href="https://discord.gg/Y2YwG5TnNr"
+              target="_blank"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-base font-medium text-gray-700 hover:bg-green-100 text-xl"
             >
               Join Discord
