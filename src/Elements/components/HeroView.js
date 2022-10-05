@@ -6,7 +6,7 @@ import Input from "./Input";
 import Promo from "./Promo"
 
 const navigation = [
-  { name: 'Launchpad', href: 'https://hederasentient.com/' },
+  { name: 'Launchpad', href: 'https://hederasentient.com/nft-mint/inkys-art-club-super-pass' },
   // { name: 'Secondary Market', href: 'https://zuse.market/' },
   { name: 'Discord', href: 'https://discord.gg/Y2YwG5TnNr' }
 ]
