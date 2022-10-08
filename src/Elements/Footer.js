@@ -3,8 +3,8 @@ const navigation = {
 
   main: [
     { name: 'Discord', href: 'https://discord.gg/Y2YwG5TnNr' },
-    { name: 'Hedera Sentient', href: 'https://hederasentient.com/nft-mint/inkys-art-club-super-pass' },
-    { name: 'Zuse Market ', href: 'https://zuse.market/' },
+    { name: 'Hedera Sentient', href: 'https://hederasentient.com/launchpad/inkys-art-club-super-pass' },
+    { name: 'Zuse Market ', href: 'https://zuse.market/collection/0.0.1321121' },
   ],
   social: [
     {

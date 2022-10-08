@@ -10,7 +10,7 @@ export default function AcquireNftCta() {
         <div className="mt-8">
           <div className="inline-flex rounded-md shadow">
             <a
-              href="https://hederasentient.com/nft-mint/inkys-art-club-super-pass"
+              href="https://hederasentient.com/launchpad/inkys-art-club-super-pass"
               target="_blank"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-green-400 px-5 py-3 text-base font-bold text-white hover:bg-green-600 text-xl"
             >
