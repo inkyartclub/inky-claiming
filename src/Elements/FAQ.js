@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "How does a Super Inky Pass pass work?",
     answer:
-      "At launch there will only be a fixed supply of 300 Super Inky Passes, every month a holder will be able to claim an NFT airdrop of a magical piece of art from Inky's brain. Simply visit this site, enter your hedera account id, and click claim.",
+      "At launch there will only be a fixed supply of 300 Super Inky Passes, every month a holder will be able to claim an NFT airdrop of a magical piece of art from Inky's brain. Simply visit this site, enter your hedera account id, associate the NFT collections, and click claim.",
   },
   {
     question: "Who is behind this project?",
