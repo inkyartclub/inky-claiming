@@ -5,7 +5,7 @@ const navigation = {
     { name: 'Discord', href: 'https://discord.gg/Y2YwG5TnNr' },
     { name: 'Hedera Sentient', href: 'https://hederasentient.com/launchpad/inkys-art-club-super-pass' },
     { name: 'Zuse Market', href: 'https://zuse.market/collection/0.0.1321121' },
-    { name: 'Inkpaper', href: 'https://spaces.remotesoftwaredevelopment.com/The%20Inkpaper.pdf' }
+    { name: 'Inkpaper', href: 'https://spaces.remotesoftwaredevelopment.com/the-inkpaper.pdf' }
   ],
   social: [
     {
