@@ -2,7 +2,7 @@
 const navigation = {
 
   main: [
-    { name: 'Discord', href: 'https://discord.gg/Y2YwG5TnNr' },
+    { name: 'Discord', href: 'https://discord.gg/N8AvC5DB6a' },
     { name: 'Hedera Sentient', href: 'https://hederasentient.com/launchpad/inkys-art-club-super-pass' },
     { name: 'Zuse Market', href: 'https://zuse.market/collection/0.0.1321121' },
     { name: 'Inkpaper', href: 'https://spaces.remotesoftwaredevelopment.com/The%20Inkpaper.pdf' }

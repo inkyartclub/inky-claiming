@@ -19,7 +19,7 @@ export default function AcquireNftCta() {
           </div>
           <div className="ml-3 inline-flex">
             <a
-              href="https://discord.gg/Y2YwG5TnNr"
+              href="https://discord.gg/N8AvC5DB6a"
               target="_blank"
               className="inline-flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-5 py-3 text-base font-medium text-gray-700 hover:bg-green-100 text-xl"
             >

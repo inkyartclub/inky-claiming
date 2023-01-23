@@ -7,7 +7,7 @@ import Promo from "./Promo"
 
 const navigation = [
   { name: 'Inkpaper', href: 'https://spaces.remotesoftwaredevelopment.com/The%20Inkpaper.pdf' },
-  { name: 'Discord', href: 'https://discord.gg/Y2YwG5TnNr' },
+  { name: 'Discord', href: 'https://discord.gg/N8AvC5DB6a' },
   { name: 'Launchpad', href: 'https://hederasentient.com/launchpad/inkys-art-club-super-pass' }
 ]
 
