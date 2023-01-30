@@ -28,7 +28,7 @@ const faqs = [
   {
     question: "How do I acquire a pass and be part of the community?",
     answer:
-      "Firstly, join our Discord to meet with the community, then you may acquire a pass through our launchpad partner or secondary marketplaces, like Zuse Market.",
+      "Firstly, join our Discord to meet with the community, then you may acquire a pass through our launchpad partner or secondary marketplaces, like Hashguild.",
   },
   {
     question: "How can I support or partner with Inky's Art Club?",
