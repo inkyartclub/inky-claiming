@@ -33,7 +33,6 @@ export default function Input({
           value={value}
         />
         { canClaimMode && <SerialDropdown updateSerial={updateSerial} accountId={accountId}/> }
-        />
       </div>
     </div>
   )
